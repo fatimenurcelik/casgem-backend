@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="oop.Product"/>
+    <fullyQualifiedTypeName name="oop.Category"/>
+    <fullyQualifiedTypeName name="kodlamaIO.Instructor"/>
+    <fullyQualifiedTypeName name="kodlamaIO.Category"/>
+    <fullyQualifiedTypeName name="IndividualCustomer"/>
+    <fullyQualifiedTypeName name="Customer"/>
+    <fullyQualifiedTypeName name="CorporateCustomer"/>
+    <fullyQualifiedTypeName name="PointCalculator"/>
+    <fullyQualifiedTypeName name="WomenPointCalculator"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="DbLogger"/>
+    <fullyQualifiedTypeName name="FileLogger"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="Log"/>
+    <fullyQualifiedTypeName name="ElasticSearchLogger"/>
 </qualifiedTypeNameHistroy>

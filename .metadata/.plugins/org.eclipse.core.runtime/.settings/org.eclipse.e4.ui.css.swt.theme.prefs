@@ -1,2 +1,4 @@
+darkestApplied=true
 eclipse.preferences.version=1
-themeid=org.eclipse.e4.ui.css.theme.e4_default
+enableddarkestdark=true
+themeid=com.genuitec.eclipse.themes.dark
