@@ -1,0 +1,15 @@
+package oop;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Product product1 =new Product();
+		product1.id = 1;
+		product1.name = "Elma";
+		product1.unitPrice = 50;
+		product1.discountedPrice = 45;
+		 
+		System.out.println(product1.name);
+	}
+
+}

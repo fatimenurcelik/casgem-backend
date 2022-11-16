@@ -1,0 +1,11 @@
+package kodlamaIO;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Course course1 = new Course(1, "Java" ,"Engin Demirog" ,"img1", "0");
+		Instructor instructor1 = new Instructor(1, "Engin Demirog" , "imgIns");
+		Category category1 = new Category(1, "Programlama");
+	}
+
+}

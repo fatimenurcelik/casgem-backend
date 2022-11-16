@@ -1,0 +1,11 @@
+package oop;
+
+public class Product {
+	//fields
+	
+	int id;
+	String name;
+	double unitPrice;
+	int discountRate;
+	double discountedPrice;
+}

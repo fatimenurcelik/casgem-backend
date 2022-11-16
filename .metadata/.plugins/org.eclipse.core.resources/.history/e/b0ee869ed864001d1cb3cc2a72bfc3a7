@@ -1,0 +1,40 @@
+package oop;
+
+public class Product {
+	//fields
+	private int id;
+	private String name;
+	private double unitPrice;
+	private int discountRate;
+	private double discountedPrice;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getUnitPrice() {
+		return unitPrice;
+	}
+	public void setUnitPrice(double unitPrice) {
+		this.unitPrice = unitPrice;
+	}
+	public int getDiscountRate() {
+		return discountRate;
+	}
+	public void setDiscountRate(int discountRate) {
+		this.discountRate = discountRate;
+	}
+	public double getDiscountedPrice() {
+		discountedPrice = unitPrice - (unitPrice * discountRate / 100);
+		return discountedPrice;
+	}
+	
+}
