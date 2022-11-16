@@ -6,32 +6,33 @@ public class Main {
 	public static void main(String[] args) {
 
 		PointCalculator pointCalculator1 = new WomenPointCalculator();
-		pointCalculator1.calculate(5, 2);
+		pointCalculator1.setFailures(5);
+		pointCalculator1.setHits(4);
+		pointCalculator1.calculate();
 		PointCalculator pointCalculator3 = new WomenPointCalculator();
-		pointCalculator3.calculate(3, 2);
+		pointCalculator3.setFailures(8);
+		pointCalculator3.setHits(6);
 		PointCalculator pointCalculator4 = new WomenPointCalculator();
-		pointCalculator4.calculate(2, 2);
+		pointCalculator4.setFailures(9);
+		pointCalculator4.setHits(6);
 		PointCalculator pointCalculator5 = new WomenPointCalculator();
-		pointCalculator5.calculate(8, 2);
+		pointCalculator5.setFailures(5);
+		pointCalculator5.setHits(1);
 		PointCalculator pointCalculator2 = new ManPointCalculator();
-		pointCalculator2.calculate(6, 2);
+		pointCalculator2.setFailures(5);
+		pointCalculator2.setHits(1);
 
 		List<Gamer> gamers = new ArrayList<>();
 
 		Gamer gamer1 = new Gamer(1, "Berna", "a", "arastýrmacý", pointCalculator1, "W");
-		gamer1.setPointCalculator(pointCalculator1);
 
 		Gamer gamer2 = new Gamer(2, "Merve", "b", "merhametli", pointCalculator3, "W");
-		gamer2.setPointCalculator(pointCalculator3);
 
-		Gamer gamer3 = new Gamer(3, "Fatma", "d", "azimli", pointCalculator4, "W");
-		gamer3.setPointCalculator(pointCalculator4);
+		Gamer gamer3 = new Gamer(3, "Fatma", "c", "azimli", pointCalculator4, "W");
 
 		Gamer gamer4 = new Gamer(4, "Muhammet", "d", "uyuz", pointCalculator2, "M");
-		gamer4.setPointCalculator(pointCalculator2);
 
 		Gamer gamer5 = new Gamer(5, "Gözde", "e", "iyi", pointCalculator5, "W");
-		gamer5.setPointCalculator(pointCalculator5);
 
 		gamers.add(gamer1);
 		gamers.add(gamer2);
@@ -44,7 +45,8 @@ public class Main {
 		for (Gamer gamer : gamers) {
 			System.out.print(gamer.getName() + " : ");
 			System.out.print(gamer.getGender() + " : ");
-			gamer.getPointCalculator().calculate(0, 0);
+			System.out.print(gamer.getPointCalculator().getFailures() +" - "+ gamer.getPointCalculator().getHits()+ " ");
+			gamer.getPointCalculator().calculate();
 		}
 
 	}

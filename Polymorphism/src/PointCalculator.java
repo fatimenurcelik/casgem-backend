@@ -1,5 +1,26 @@
 public class PointCalculator {
-	public void calculate(int hits, int failures) {
-		System.out.println("Basic Calculator : " + (hits - failures) * 10);
+
+	private int hits;
+	private int failures;
+
+	public void calculate() {
+		System.out.println("Basic Calculator : " + (getHits() - getFailures()) * 10);
 	}
+
+	public int getHits() {
+		return hits;
+	}
+
+	public void setHits(int hits) {
+		this.hits = hits;
+	}
+
+	public int getFailures() {
+		return failures;
+	}
+
+	public void setFailures(int failures) {
+		this.failures = failures;
+	}
+
 }

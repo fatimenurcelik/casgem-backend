@@ -1,6 +1,6 @@
 public class ManPointCalculator extends PointCalculator{
 	@Override
-	public void calculate(int hits, int failures) {
-		System.out.println("Men's Point Calculator : " + ((hits - failures) * 10 + 100));
+	public void calculate() {
+		System.out.println("Men's Point Calculator : " + ((getHits() - getFailures()) * 10 + 100));
 	}
 }
