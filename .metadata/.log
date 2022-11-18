@@ -712,3 +712,956 @@ Caused by: java.security.NoSuchAlgorithmException: No algorithm found for 1.2.84
 	at org.eclipse.osgi.internal.signedcontent.SignedBundleFile.initializeSignedContent(SignedBundleFile.java:56)
 	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:223)
 	... 17 more
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2022-11-18 10:21:00.555
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2022-11-18 10:21:00.558
+!MESSAGE session context was:(profile=C__Users_User_eclipse_jee-2021-03_eclipse, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2022-11-18 10:21:00.558
+!MESSAGE Problems downloading artifact: org.eclipse.update.feature,org.springframework.boot.ide.main.feature,4.16.1.202210240918.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 2 2022-11-18 10:21:00.558
+!MESSAGE Error reading signed content:C:\Users\User\AppData\Local\Temp\signatureFile17245211258348285940.jar
+!STACK 0
+java.security.NoSuchAlgorithmException: An error occurred while processing the signatures for the file: C:\Users\User\AppData\Local\Temp\signatureFile17245211258348285940.jar
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:231)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:84)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:66)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:115)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ZipVerifierStep.close(ZipVerifierStep.java:48)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1253)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:646)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:777)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:289)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:225)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:155)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:760)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.security.NoSuchAlgorithmException: No algorithm found for 1.2.840.113549.1.1.11
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.findEncryption(PKCS7Processor.java:95)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.processSignerInfos(PKCS7Processor.java:364)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.<init>(PKCS7Processor.java:172)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.processSigner(SignatureBlockProcessor.java:109)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.process(SignatureBlockProcessor.java:76)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleFile.initializeSignedContent(SignedBundleFile.java:56)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:223)
+	... 19 more
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2022-11-18 10:21:00.560
+!MESSAGE Problems downloading artifact: binary,org.springframework.boot.ide.main.feature_root,4.16.1.202210240918.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 2 2022-11-18 10:21:00.560
+!MESSAGE Error reading signed content:C:\Users\User\AppData\Local\Temp\signatureFile7977091772716668028.jar
+!STACK 0
+java.security.NoSuchAlgorithmException: An error occurred while processing the signatures for the file: C:\Users\User\AppData\Local\Temp\signatureFile7977091772716668028.jar
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:231)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:84)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:66)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:115)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1253)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:646)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:777)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:289)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:225)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:155)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:760)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.security.NoSuchAlgorithmException: No algorithm found for 1.2.840.113549.1.1.11
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.findEncryption(PKCS7Processor.java:95)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.processSignerInfos(PKCS7Processor.java:364)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.<init>(PKCS7Processor.java:172)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.processSigner(SignatureBlockProcessor.java:109)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.process(SignatureBlockProcessor.java:76)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleFile.initializeSignedContent(SignedBundleFile.java:56)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:223)
+	... 17 more
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2022-11-18 10:21:00.561
+!MESSAGE Problems downloading artifact: osgi.bundle,org.springframework.ide.eclipse.beans.ui.live,4.16.1.202210240918.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 2 2022-11-18 10:21:00.561
+!MESSAGE Error reading signed content:C:\Users\User\AppData\Local\Temp\signatureFile9432431408129567895.jar
+!STACK 0
+java.security.NoSuchAlgorithmException: An error occurred while processing the signatures for the file: C:\Users\User\AppData\Local\Temp\signatureFile9432431408129567895.jar
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:231)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:84)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:66)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:115)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1253)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:646)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:777)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:289)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:225)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:155)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:760)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.security.NoSuchAlgorithmException: No algorithm found for 1.2.840.113549.1.1.11
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.findEncryption(PKCS7Processor.java:95)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.processSignerInfos(PKCS7Processor.java:364)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.<init>(PKCS7Processor.java:172)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.processSigner(SignatureBlockProcessor.java:109)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.process(SignatureBlockProcessor.java:76)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleFile.initializeSignedContent(SignedBundleFile.java:56)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:223)
+	... 17 more
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2022-11-18 10:21:00.562
+!MESSAGE Problems downloading artifact: osgi.bundle,org.springframework.ide.eclipse.boot,4.16.1.202210240918.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 2 2022-11-18 10:21:00.562
+!MESSAGE Error reading signed content:C:\Users\User\AppData\Local\Temp\signatureFile4315194639312694394.jar
+!STACK 0
+java.security.NoSuchAlgorithmException: An error occurred while processing the signatures for the file: C:\Users\User\AppData\Local\Temp\signatureFile4315194639312694394.jar
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:231)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:84)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:66)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:115)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1253)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:646)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:777)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:289)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:225)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:155)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:760)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.security.NoSuchAlgorithmException: No algorithm found for 1.2.840.113549.1.1.11
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.findEncryption(PKCS7Processor.java:95)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.processSignerInfos(PKCS7Processor.java:364)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.<init>(PKCS7Processor.java:172)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.processSigner(SignatureBlockProcessor.java:109)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.process(SignatureBlockProcessor.java:76)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleFile.initializeSignedContent(SignedBundleFile.java:56)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:223)
+	... 17 more
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2022-11-18 10:21:00.563
+!MESSAGE Problems downloading artifact: osgi.bundle,org.springframework.ide.eclipse.boot.dash,4.16.1.202210240918.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 2 2022-11-18 10:21:00.563
+!MESSAGE Error reading signed content:C:\Users\User\AppData\Local\Temp\signatureFile16367844992944555336.jar
+!STACK 0
+java.security.NoSuchAlgorithmException: An error occurred while processing the signatures for the file: C:\Users\User\AppData\Local\Temp\signatureFile16367844992944555336.jar
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:231)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:84)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:66)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:115)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1253)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:646)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:777)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:289)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:225)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:155)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:760)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.security.NoSuchAlgorithmException: No algorithm found for 1.2.840.113549.1.1.11
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.findEncryption(PKCS7Processor.java:95)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.processSignerInfos(PKCS7Processor.java:364)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.<init>(PKCS7Processor.java:172)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.processSigner(SignatureBlockProcessor.java:109)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.process(SignatureBlockProcessor.java:76)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleFile.initializeSignedContent(SignedBundleFile.java:56)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:223)
+	... 17 more
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2022-11-18 10:21:00.571
+!MESSAGE Problems downloading artifact: osgi.bundle,org.springframework.ide.eclipse.boot.dash.cf,4.16.1.202210240918.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 2 2022-11-18 10:21:00.571
+!MESSAGE Error reading signed content:C:\Users\User\AppData\Local\Temp\signatureFile8513762562731249690.jar
+!STACK 0
+java.security.NoSuchAlgorithmException: An error occurred while processing the signatures for the file: C:\Users\User\AppData\Local\Temp\signatureFile8513762562731249690.jar
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:231)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:84)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:66)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:115)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1253)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:646)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:777)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:289)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:225)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:155)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:760)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.security.NoSuchAlgorithmException: No algorithm found for 1.2.840.113549.1.1.11
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.findEncryption(PKCS7Processor.java:95)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.processSignerInfos(PKCS7Processor.java:364)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.<init>(PKCS7Processor.java:172)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.processSigner(SignatureBlockProcessor.java:109)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.process(SignatureBlockProcessor.java:76)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleFile.initializeSignedContent(SignedBundleFile.java:56)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:223)
+	... 17 more
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2022-11-18 10:21:00.573
+!MESSAGE Problems downloading artifact: osgi.bundle,org.springframework.ide.eclipse.boot.dash.docker,4.16.1.202210240918.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 2 2022-11-18 10:21:00.574
+!MESSAGE Error reading signed content:C:\Users\User\AppData\Local\Temp\signatureFile6311789325577420936.jar
+!STACK 0
+java.security.NoSuchAlgorithmException: An error occurred while processing the signatures for the file: C:\Users\User\AppData\Local\Temp\signatureFile6311789325577420936.jar
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:231)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:84)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:66)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:115)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1253)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:646)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:777)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:289)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:225)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:155)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:760)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.security.NoSuchAlgorithmException: No algorithm found for 1.2.840.113549.1.1.11
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.findEncryption(PKCS7Processor.java:95)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.processSignerInfos(PKCS7Processor.java:364)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.<init>(PKCS7Processor.java:172)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.processSigner(SignatureBlockProcessor.java:109)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.process(SignatureBlockProcessor.java:76)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleFile.initializeSignedContent(SignedBundleFile.java:56)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:223)
+	... 17 more
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2022-11-18 10:21:00.576
+!MESSAGE Problems downloading artifact: org.eclipse.update.feature,org.springframework.ide.eclipse.boot.dash.feature,4.16.1.202210240918.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 2 2022-11-18 10:21:00.576
+!MESSAGE Error reading signed content:C:\Users\User\AppData\Local\Temp\signatureFile9923368417651972813.jar
+!STACK 0
+java.security.NoSuchAlgorithmException: An error occurred while processing the signatures for the file: C:\Users\User\AppData\Local\Temp\signatureFile9923368417651972813.jar
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:231)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:84)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:66)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:115)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ZipVerifierStep.close(ZipVerifierStep.java:48)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1253)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:646)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:777)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:289)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:225)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:155)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:760)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.security.NoSuchAlgorithmException: No algorithm found for 1.2.840.113549.1.1.11
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.findEncryption(PKCS7Processor.java:95)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.processSignerInfos(PKCS7Processor.java:364)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.<init>(PKCS7Processor.java:172)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.processSigner(SignatureBlockProcessor.java:109)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.process(SignatureBlockProcessor.java:76)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleFile.initializeSignedContent(SignedBundleFile.java:56)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:223)
+	... 19 more
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2022-11-18 10:21:00.577
+!MESSAGE Problems downloading artifact: osgi.bundle,org.springframework.ide.eclipse.boot.launch,4.16.1.202210240918.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 2 2022-11-18 10:21:00.577
+!MESSAGE Error reading signed content:C:\Users\User\AppData\Local\Temp\signatureFile6886438870034461832.jar
+!STACK 0
+java.security.NoSuchAlgorithmException: An error occurred while processing the signatures for the file: C:\Users\User\AppData\Local\Temp\signatureFile6886438870034461832.jar
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:231)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:84)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:66)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:115)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1253)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:646)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:777)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:289)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:225)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:155)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:760)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.security.NoSuchAlgorithmException: No algorithm found for 1.2.840.113549.1.1.11
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.findEncryption(PKCS7Processor.java:95)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.processSignerInfos(PKCS7Processor.java:364)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.<init>(PKCS7Processor.java:172)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.processSigner(SignatureBlockProcessor.java:109)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.process(SignatureBlockProcessor.java:76)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleFile.initializeSignedContent(SignedBundleFile.java:56)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:223)
+	... 17 more
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2022-11-18 10:21:00.579
+!MESSAGE Problems downloading artifact: osgi.bundle,org.springframework.ide.eclipse.boot.refactoring,4.16.1.202210240918.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 2 2022-11-18 10:21:00.579
+!MESSAGE Error reading signed content:C:\Users\User\AppData\Local\Temp\signatureFile3848395717871824559.jar
+!STACK 0
+java.security.NoSuchAlgorithmException: An error occurred while processing the signatures for the file: C:\Users\User\AppData\Local\Temp\signatureFile3848395717871824559.jar
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:231)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:84)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:66)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:115)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1253)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:646)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:777)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:289)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:225)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:155)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:760)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.security.NoSuchAlgorithmException: No algorithm found for 1.2.840.113549.1.1.11
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.findEncryption(PKCS7Processor.java:95)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.processSignerInfos(PKCS7Processor.java:364)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.<init>(PKCS7Processor.java:172)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.processSigner(SignatureBlockProcessor.java:109)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.process(SignatureBlockProcessor.java:76)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleFile.initializeSignedContent(SignedBundleFile.java:56)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:223)
+	... 17 more
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2022-11-18 10:21:00.579
+!MESSAGE Problems downloading artifact: osgi.bundle,org.springframework.ide.eclipse.boot.restart,4.16.1.202210240918.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 2 2022-11-18 10:21:00.579
+!MESSAGE Error reading signed content:C:\Users\User\AppData\Local\Temp\signatureFile9620432061992274679.jar
+!STACK 0
+java.security.NoSuchAlgorithmException: An error occurred while processing the signatures for the file: C:\Users\User\AppData\Local\Temp\signatureFile9620432061992274679.jar
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:231)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:84)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:66)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:115)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1253)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:646)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:777)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:289)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:225)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:155)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:760)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.security.NoSuchAlgorithmException: No algorithm found for 1.2.840.113549.1.1.11
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.findEncryption(PKCS7Processor.java:95)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.processSignerInfos(PKCS7Processor.java:364)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.<init>(PKCS7Processor.java:172)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.processSigner(SignatureBlockProcessor.java:109)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.process(SignatureBlockProcessor.java:76)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleFile.initializeSignedContent(SignedBundleFile.java:56)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:223)
+	... 17 more
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2022-11-18 10:21:00.580
+!MESSAGE Problems downloading artifact: osgi.bundle,org.springframework.ide.eclipse.boot.templates,4.16.1.202210240918.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 2 2022-11-18 10:21:00.580
+!MESSAGE Error reading signed content:C:\Users\User\AppData\Local\Temp\signatureFile9703617880979167006.jar
+!STACK 0
+java.security.NoSuchAlgorithmException: An error occurred while processing the signatures for the file: C:\Users\User\AppData\Local\Temp\signatureFile9703617880979167006.jar
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:231)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:84)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:66)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:115)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1253)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:646)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:777)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:289)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:225)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:155)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:760)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.security.NoSuchAlgorithmException: No algorithm found for 1.2.840.113549.1.1.11
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.findEncryption(PKCS7Processor.java:95)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.processSignerInfos(PKCS7Processor.java:364)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.<init>(PKCS7Processor.java:172)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.processSigner(SignatureBlockProcessor.java:109)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.process(SignatureBlockProcessor.java:76)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleFile.initializeSignedContent(SignedBundleFile.java:56)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:223)
+	... 17 more
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2022-11-18 10:21:00.581
+!MESSAGE Problems downloading artifact: osgi.bundle,org.springframework.ide.eclipse.boot.validation,4.16.1.202210240918.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 2 2022-11-18 10:21:00.582
+!MESSAGE Error reading signed content:C:\Users\User\AppData\Local\Temp\signatureFile8980644736097188451.jar
+!STACK 0
+java.security.NoSuchAlgorithmException: An error occurred while processing the signatures for the file: C:\Users\User\AppData\Local\Temp\signatureFile8980644736097188451.jar
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:231)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:84)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:66)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:115)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1253)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:646)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:777)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:289)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:225)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:155)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:760)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.security.NoSuchAlgorithmException: No algorithm found for 1.2.840.113549.1.1.11
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.findEncryption(PKCS7Processor.java:95)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.processSignerInfos(PKCS7Processor.java:364)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.<init>(PKCS7Processor.java:172)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.processSigner(SignatureBlockProcessor.java:109)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.process(SignatureBlockProcessor.java:76)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleFile.initializeSignedContent(SignedBundleFile.java:56)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:223)
+	... 17 more
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2022-11-18 10:21:00.583
+!MESSAGE Problems downloading artifact: osgi.bundle,org.springframework.ide.eclipse.boot.wizard,4.16.1.202210240918.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 2 2022-11-18 10:21:00.584
+!MESSAGE Error reading signed content:C:\Users\User\AppData\Local\Temp\signatureFile8671422748265647253.jar
+!STACK 0
+java.security.NoSuchAlgorithmException: An error occurred while processing the signatures for the file: C:\Users\User\AppData\Local\Temp\signatureFile8671422748265647253.jar
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:231)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:84)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:66)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:115)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1253)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:646)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:777)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:289)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:225)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:155)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:760)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.security.NoSuchAlgorithmException: No algorithm found for 1.2.840.113549.1.1.11
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.findEncryption(PKCS7Processor.java:95)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.processSignerInfos(PKCS7Processor.java:364)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.<init>(PKCS7Processor.java:172)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.processSigner(SignatureBlockProcessor.java:109)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.process(SignatureBlockProcessor.java:76)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleFile.initializeSignedContent(SignedBundleFile.java:56)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:223)
+	... 17 more
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2022-11-18 10:21:00.585
+!MESSAGE Problems downloading artifact: osgi.bundle,org.springframework.ide.eclipse.buildship30,4.16.1.202210240918.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 2 2022-11-18 10:21:00.585
+!MESSAGE Error reading signed content:C:\Users\User\AppData\Local\Temp\signatureFile7592802790020231067.jar
+!STACK 0
+java.security.NoSuchAlgorithmException: An error occurred while processing the signatures for the file: C:\Users\User\AppData\Local\Temp\signatureFile7592802790020231067.jar
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:231)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:84)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:66)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:115)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1253)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:646)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:777)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:289)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:225)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:155)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:760)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.security.NoSuchAlgorithmException: No algorithm found for 1.2.840.113549.1.1.11
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.findEncryption(PKCS7Processor.java:95)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.processSignerInfos(PKCS7Processor.java:364)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.<init>(PKCS7Processor.java:172)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.processSigner(SignatureBlockProcessor.java:109)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.process(SignatureBlockProcessor.java:76)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleFile.initializeSignedContent(SignedBundleFile.java:56)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:223)
+	... 17 more
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2022-11-18 10:21:00.586
+!MESSAGE Problems downloading artifact: osgi.bundle,org.springframework.ide.eclipse.docker.client,4.16.1.202210240918.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 2 2022-11-18 10:21:00.586
+!MESSAGE Error reading signed content:C:\Users\User\AppData\Local\Temp\signatureFile9560690150783481697.jar
+!STACK 0
+java.security.NoSuchAlgorithmException: An error occurred while processing the signatures for the file: C:\Users\User\AppData\Local\Temp\signatureFile9560690150783481697.jar
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:231)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:84)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:66)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:115)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1253)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:646)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:777)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:289)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:225)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:155)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:760)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.security.NoSuchAlgorithmException: No algorithm found for 1.2.840.113549.1.1.11
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.findEncryption(PKCS7Processor.java:95)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.processSignerInfos(PKCS7Processor.java:364)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.<init>(PKCS7Processor.java:172)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.processSigner(SignatureBlockProcessor.java:109)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.process(SignatureBlockProcessor.java:76)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleFile.initializeSignedContent(SignedBundleFile.java:56)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:223)
+	... 17 more
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2022-11-18 10:21:00.589
+!MESSAGE Problems downloading artifact: osgi.bundle,org.springframework.ide.eclipse.imports,4.16.1.202210240918.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 2 2022-11-18 10:21:00.589
+!MESSAGE Error reading signed content:C:\Users\User\AppData\Local\Temp\signatureFile16178568538879756849.jar
+!STACK 0
+java.security.NoSuchAlgorithmException: An error occurred while processing the signatures for the file: C:\Users\User\AppData\Local\Temp\signatureFile16178568538879756849.jar
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:231)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:84)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:66)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:115)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1253)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:646)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:777)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:289)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:225)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:155)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:760)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.security.NoSuchAlgorithmException: No algorithm found for 1.2.840.113549.1.1.11
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.findEncryption(PKCS7Processor.java:95)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.processSignerInfos(PKCS7Processor.java:364)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.<init>(PKCS7Processor.java:172)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.processSigner(SignatureBlockProcessor.java:109)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.process(SignatureBlockProcessor.java:76)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleFile.initializeSignedContent(SignedBundleFile.java:56)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:223)
+	... 17 more
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2022-11-18 10:21:00.590
+!MESSAGE Problems downloading artifact: osgi.bundle,org.springframework.ide.eclipse.maven.pom,4.16.1.202210240918.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 2 2022-11-18 10:21:00.591
+!MESSAGE Error reading signed content:C:\Users\User\AppData\Local\Temp\signatureFile4115642918710778484.jar
+!STACK 0
+java.security.NoSuchAlgorithmException: An error occurred while processing the signatures for the file: C:\Users\User\AppData\Local\Temp\signatureFile4115642918710778484.jar
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:231)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:84)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:66)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:115)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1253)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:646)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:777)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:289)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:225)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:155)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:760)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.security.NoSuchAlgorithmException: No algorithm found for 1.2.840.113549.1.1.11
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.findEncryption(PKCS7Processor.java:95)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.processSignerInfos(PKCS7Processor.java:364)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.<init>(PKCS7Processor.java:172)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.processSigner(SignatureBlockProcessor.java:109)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.process(SignatureBlockProcessor.java:76)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleFile.initializeSignedContent(SignedBundleFile.java:56)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:223)
+	... 17 more
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2022-11-18 10:21:00.591
+!MESSAGE Problems downloading artifact: osgi.bundle,org.springframework.ide.eclipse.xml.namespaces,4.16.1.202210240918.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 2 2022-11-18 10:21:00.592
+!MESSAGE Error reading signed content:C:\Users\User\AppData\Local\Temp\signatureFile12673162626144032565.jar
+!STACK 0
+java.security.NoSuchAlgorithmException: An error occurred while processing the signatures for the file: C:\Users\User\AppData\Local\Temp\signatureFile12673162626144032565.jar
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:231)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:84)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:66)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:115)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1253)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:646)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:777)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:289)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:225)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:155)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:760)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.security.NoSuchAlgorithmException: No algorithm found for 1.2.840.113549.1.1.11
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.findEncryption(PKCS7Processor.java:95)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.processSignerInfos(PKCS7Processor.java:364)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.<init>(PKCS7Processor.java:172)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.processSigner(SignatureBlockProcessor.java:109)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.process(SignatureBlockProcessor.java:76)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleFile.initializeSignedContent(SignedBundleFile.java:56)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:223)
+	... 17 more
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2022-11-18 10:21:00.594
+!MESSAGE Problems downloading artifact: org.eclipse.update.feature,org.springframework.ide.eclipse.xml.namespaces.feature,4.16.1.202210240918.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 2 2022-11-18 10:21:00.594
+!MESSAGE Error reading signed content:C:\Users\User\AppData\Local\Temp\signatureFile18015096189530998071.jar
+!STACK 0
+java.security.NoSuchAlgorithmException: An error occurred while processing the signatures for the file: C:\Users\User\AppData\Local\Temp\signatureFile18015096189530998071.jar
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:231)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:84)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:66)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:115)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ZipVerifierStep.close(ZipVerifierStep.java:48)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1253)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:646)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:777)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:289)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:225)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:155)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:760)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.security.NoSuchAlgorithmException: No algorithm found for 1.2.840.113549.1.1.11
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.findEncryption(PKCS7Processor.java:95)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.processSignerInfos(PKCS7Processor.java:364)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.<init>(PKCS7Processor.java:172)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.processSigner(SignatureBlockProcessor.java:109)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.process(SignatureBlockProcessor.java:76)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleFile.initializeSignedContent(SignedBundleFile.java:56)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:223)
+	... 19 more
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2022-11-18 10:21:00.594
+!MESSAGE Problems downloading artifact: osgi.bundle,org.springsource.ide.eclipse.commons.cloudfoundry.client.v2,4.16.1.202210240918.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 2 2022-11-18 10:21:00.594
+!MESSAGE Error reading signed content:C:\Users\User\AppData\Local\Temp\signatureFile11297564919060187843.jar
+!STACK 0
+java.security.NoSuchAlgorithmException: An error occurred while processing the signatures for the file: C:\Users\User\AppData\Local\Temp\signatureFile11297564919060187843.jar
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:231)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:84)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:66)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:115)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1253)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:646)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:777)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:289)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:225)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:155)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:760)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.security.NoSuchAlgorithmException: No algorithm found for 1.2.840.113549.1.1.11
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.findEncryption(PKCS7Processor.java:95)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.processSignerInfos(PKCS7Processor.java:364)
+	at org.eclipse.osgi.internal.signedcontent.PKCS7Processor.<init>(PKCS7Processor.java:172)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.processSigner(SignatureBlockProcessor.java:109)
+	at org.eclipse.osgi.internal.signedcontent.SignatureBlockProcessor.process(SignatureBlockProcessor.java:76)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleFile.initializeSignedContent(SignedBundleFile.java:56)
+	at org.eclipse.osgi.internal.signedcontent.SignedBundleHook.getSignedContent(SignedBundleHook.java:223)
+	... 17 more
+
+!ENTRY org.eclipse.ui 4 0 2022-11-18 10:34:41.441
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
+	at java.base/java.util.Objects.checkIndex(Objects.java:359)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at java.base/java.util.Collections$SynchronizedList.get(Collections.java:2460)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.selectProposal(CompletionProposalPopup.java:1418)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.access$4(CompletionProposalPopup.java:1407)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup$ProposalSelectionListener.keyReleased(CompletionProposalPopup.java:253)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:178)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4209)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1043)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1067)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1052)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1094)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1090)
+	at org.eclipse.swt.widgets.Widget.wmKeyUp(Widget.java:1835)
+	at org.eclipse.swt.widgets.Control.WM_KEYUP(Control.java:5173)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4793)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4930)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3624)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+!SESSION 2022-11-18 17:55:43.529 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=15.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=tr_TR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-11-18 17:56:03.398
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2022-11-18 17:56:11.957
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-11-18 17:56:11.957
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@541ea657,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7308e2d6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui.navigator 2 0 2022-11-18 17:56:35.151
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.ui.navigator 2 0 2022-11-18 17:56:35.155
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-11-18 17:56:35.419
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\User'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui.ide 4 4 2022-11-18 17:56:42.174
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:165)
+	at org.eclipse.swt.graphics.Image.win32_new(Image.java:2163)
+	at org.eclipse.swt.widgets.TaskBar.createShellLink(TaskBar.java:168)
+	at org.eclipse.swt.widgets.TaskBar.createShellLinkArray(TaskBar.java:208)
+	at org.eclipse.swt.widgets.TaskBar.setMenu(TaskBar.java:382)
+	at org.eclipse.swt.widgets.TaskItem.setMenu(TaskItem.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.setMenuOnTaskItem(TaskBarManager.java:121)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.update(TaskBarManager.java:112)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:673)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.addSystemTaskBarActions(TasksUiPlugin.java:479)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.access$7(TasksUiPlugin.java:458)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin$TasksUiInitializationJob.runInUIThread(TasksUiPlugin.java:394)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+
+!ENTRY org.eclipse.ui.ide 4 4 2022-11-18 17:56:42.176
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:165)
+	at org.eclipse.swt.graphics.Image.win32_new(Image.java:2163)
+	at org.eclipse.swt.widgets.TaskBar.createShellLink(TaskBar.java:168)
+	at org.eclipse.swt.widgets.TaskBar.createShellLinkArray(TaskBar.java:208)
+	at org.eclipse.swt.widgets.TaskBar.setMenu(TaskBar.java:382)
+	at org.eclipse.swt.widgets.TaskItem.setMenu(TaskItem.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.setMenuOnTaskItem(TaskBarManager.java:121)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.update(TaskBarManager.java:112)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:673)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.addSystemTaskBarActions(TasksUiPlugin.java:479)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.access$7(TasksUiPlugin.java:458)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin$TasksUiInitializationJob.runInUIThread(TasksUiPlugin.java:394)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2022-11-18 17:56:56.391
+!MESSAGE Connection timed out: connect
+!STACK 0
+java.net.ConnectException: Connection timed out: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:574)
+	at java.base/sun.nio.ch.Net.connect(Net.java:563)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:648)
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:290)
+	at java.base/sun.security.ssl.BaseSSLSocketImpl.connect(BaseSSLSocketImpl.java:173)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569)
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:265)
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:372)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:189)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1194)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1082)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:175)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1600)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1528)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:527)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:308)
+	at com.genuitec.eclipse.theming.ui.IconDownloaderJob.getApprovedDefinitions(IconDownloaderJob.java:86)
+	at com.genuitec.eclipse.theming.ui.IconDownloaderJob.run(IconDownloaderJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2022-11-18 21:36:00.305
+!MESSAGE Başka bir işlem dosyanın bir bölümünü kilitlediğinden bu işlem dosyaya erişemiyor
+!STACK 0
+java.io.IOException: Başka bir işlem dosyanın bir bölümünü kilitlediğinden bu işlem dosyaya erişemiyor
+	at java.base/java.io.FileInputStream.read0(Native Method)
+	at java.base/java.io.FileInputStream.read(FileInputStream.java:223)
+	at org.eclipse.jgit.util.IO.readWholeStream(IO.java:169)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.possiblyFilteredInputStream(WorkingTreeIterator.java:418)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.possiblyFilteredInputStream(WorkingTreeIterator.java:404)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getEntryContentLength(WorkingTreeIterator.java:618)
+	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:200)
+	at org.eclipse.egit.ui.internal.staging.StagingView$52.run(StagingView.java:3518)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2022-11-18 21:37:20.525
+!MESSAGE Başka bir işlem dosyanın bir bölümünü kilitlediğinden bu işlem dosyaya erişemiyor
+!STACK 0
+java.io.IOException: Başka bir işlem dosyanın bir bölümünü kilitlediğinden bu işlem dosyaya erişemiyor
+	at java.base/java.io.FileInputStream.read0(Native Method)
+	at java.base/java.io.FileInputStream.read(FileInputStream.java:223)
+	at org.eclipse.jgit.util.IO.readWholeStream(IO.java:169)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.possiblyFilteredInputStream(WorkingTreeIterator.java:418)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.possiblyFilteredInputStream(WorkingTreeIterator.java:404)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getEntryContentLength(WorkingTreeIterator.java:618)
+	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:200)
+	at org.eclipse.egit.ui.internal.staging.StagingView$52.run(StagingView.java:3518)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
