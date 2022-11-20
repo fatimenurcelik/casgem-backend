@@ -7,7 +7,10 @@ import org.springframework.stereotype.Service;
 
 import com.kodlama.io.northwind.business.abstracts.EmployeeService;
 import com.kodlama.io.northwind.business.requests.employees.CreateEmployeeRequest;
+import com.kodlama.io.northwind.business.requests.products.UpdateEmployeeRequest;
+import com.kodlama.io.northwind.business.responses.employees.DeleteEmployeeResponse;
 import com.kodlama.io.northwind.business.responses.employees.GetAllEmployeesResponse;
+import com.kodlama.io.northwind.business.responses.employees.UpdateEmployeeResponse;
 import com.kodlama.io.northwind.dataAccess.abstracts.EmployeeRepository;
 import com.kodlama.io.northwind.entities.Employee;
 
@@ -16,9 +19,11 @@ public class EmployeeManager implements EmployeeService{
 
 	private EmployeeRepository employeeRepository;
 	
+	
 	public EmployeeManager(EmployeeRepository employeeRepository) {
 		super();
 		this.employeeRepository = employeeRepository;
+		
 	}
 
 	@Override
@@ -46,6 +51,39 @@ public class EmployeeManager implements EmployeeService{
 		employee.setSalary(createEmployeeRequest.getSalary());
 		
 		employeeRepository.save(employee);
+	}
+
+	@Override
+	public DeleteEmployeeResponse deleteById(int id) {
+		Employee employee= employeeRepository.findById(id).get();
+		employeeRepository.delete(employee);
+		
+		DeleteEmployeeResponse deleteEmployeeResponse = new DeleteEmployeeResponse();
+		deleteEmployeeResponse.setId(employee.getId());
+		deleteEmployeeResponse.setFirstName(employee.getFirstName());
+		deleteEmployeeResponse.setLastName(employee.getLastName());
+		deleteEmployeeResponse.setSalary(employee.getSalary());
+		
+		return deleteEmployeeResponse;
+	}
+
+	@Override
+	public UpdateEmployeeResponse update(UpdateEmployeeRequest updateEmployeeRequest) {
+		Employee employee = new Employee();
+		employee.setId(updateEmployeeRequest.getId());
+		employee.setFirstName(updateEmployeeRequest.getFirstName());
+		employee.setLastName(updateEmployeeRequest.getLastName());
+		employee.setSalary(updateEmployeeRequest.getSalary());
+		
+		employeeRepository.save(employee);
+		
+		UpdateEmployeeResponse updateEmployeeResponse = new UpdateEmployeeResponse();
+		updateEmployeeResponse.setId(employee.getId());
+		updateEmployeeResponse.setFirstName(employee.getFirstName());
+		updateEmployeeResponse.setLastName(employee.getLastName());
+		updateEmployeeResponse.setSalary(employee.getSalary());
+		
+		return updateEmployeeResponse;
 	}
 
 }

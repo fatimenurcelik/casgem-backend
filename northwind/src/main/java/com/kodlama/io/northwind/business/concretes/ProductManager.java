@@ -8,9 +8,10 @@ import org.springframework.stereotype.Service;
 import com.kodlama.io.northwind.business.abstracts.ProductService;
 import com.kodlama.io.northwind.business.requests.products.CreateProductRequest;
 import com.kodlama.io.northwind.business.responses.products.CreateProductResponse;
+import com.kodlama.io.northwind.business.responses.products.DeleteProductResponse;
 import com.kodlama.io.northwind.business.responses.products.GetAllProductsResponse;
 import com.kodlama.io.northwind.business.responses.products.GetProductResponse;
-import com.kodlama.io.northwind.dataAccess.abstracts.CategoryRepository;
+import com.kodlama.io.northwind.business.responses.products.UpdateProductResponse;
 import com.kodlama.io.northwind.dataAccess.abstracts.ProductRepository;
 import com.kodlama.io.northwind.entities.Category;
 import com.kodlama.io.northwind.entities.Product;
@@ -19,12 +20,10 @@ import com.kodlama.io.northwind.entities.Product;
 public class ProductManager implements ProductService{
 
 	private ProductRepository productRepository;
-	private CategoryRepository categoryRepository;
 	
-	public ProductManager(ProductRepository productRepository, CategoryRepository categoryRepository) {
+	public ProductManager(ProductRepository productRepository) {
 		super();
 		this.productRepository = productRepository;
-		this.categoryRepository = categoryRepository;
 	}
 
 	@Override
@@ -93,6 +92,46 @@ public class ProductManager implements ProductService{
 		productResponse.setUnitPrice(product.getUnitPrice());
 		productResponse.setUnitsInStock(product.getUnitsInStock());
 		return productResponse;
+	}
+
+	@Override
+	public DeleteProductResponse deleteById(int id) {
+		Product product = productRepository.findById(id).get();
+		productRepository.delete(product);
+		
+		DeleteProductResponse deleteProductResponse =new DeleteProductResponse();
+		deleteProductResponse.setId(product.getId());
+		deleteProductResponse.setCategoryName(product.getCategory().getName());
+		deleteProductResponse.setName(product.getName());
+		deleteProductResponse.setUnitPrice(product.getUnitPrice());
+		deleteProductResponse.setUnitsInStock(product.getUnitsInStock());
+		 return deleteProductResponse;
+	}
+
+	@Override
+	public UpdateProductResponse updateById(UpdateProductResponse updateProductResponse) {
+		
+		Product product = productRepository.findById(updateProductResponse.getId()).get();
+		Category category= new Category();
+		category.setId(updateProductResponse.getCategoryId());
+		
+		product.setCategory(category);
+		
+		product.setId(updateProductResponse.getId());
+		product.setName(updateProductResponse.getName());
+		product.setUnitPrice(updateProductResponse.getUnitPrice());
+		product.setUnitsInStock(updateProductResponse.getUnitsInStock());
+		product.setCategory(category);
+		
+		this.productRepository.save(product);
+		
+		updateProductResponse.setCategoryId(product.getCategory().getId());
+		updateProductResponse.setName(product.getName());
+		updateProductResponse.setUnitPrice(product.getUnitPrice());
+		updateProductResponse.setUnitsInStock(product.getUnitsInStock());
+		updateProductResponse.setId(product.getId());
+		
+		return updateProductResponse;
 	}
 
 

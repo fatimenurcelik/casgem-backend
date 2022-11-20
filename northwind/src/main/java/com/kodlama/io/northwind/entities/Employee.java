@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -34,7 +35,7 @@ public class Employee {
 	@Column(name="salary")
 	private int salary;
 	
-	@OneToMany(mappedBy = "employee")
-	List<Order> orders;
+	@OneToMany(mappedBy = "employee", fetch = FetchType.LAZY)
+	private List<Order> orders;
 
 }

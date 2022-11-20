@@ -1,17 +1,17 @@
-package com.kodlama.io.northwind.business.responses.orders;
+package com.kodlama.io.northwind.business.requests.orders;
 
 import java.time.LocalDateTime;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
-public class GetAllOrdersResponse {
+public class UpdateOrderRequest {
+	
 	private int id;
 	private LocalDateTime date;
-	private String firstName;
-	private String lastName;
-	
-}
+	private int employeeId;
+	}

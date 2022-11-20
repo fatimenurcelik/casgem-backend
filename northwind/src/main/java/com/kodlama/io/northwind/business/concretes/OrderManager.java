@@ -7,7 +7,10 @@ import org.springframework.stereotype.Service;
 
 import com.kodlama.io.northwind.business.abstracts.OrderService;
 import com.kodlama.io.northwind.business.requests.orders.CreateOrderRequest;
+import com.kodlama.io.northwind.business.requests.orders.UpdateOrderRequest;
+import com.kodlama.io.northwind.business.responses.orders.DeleteOrderResponse;
 import com.kodlama.io.northwind.business.responses.orders.GetAllOrdersResponse;
+import com.kodlama.io.northwind.business.responses.orders.UpdateOrderResponse;
 import com.kodlama.io.northwind.dataAccess.abstracts.EmployeeRepository;
 import com.kodlama.io.northwind.dataAccess.abstracts.OrderRepository;
 import com.kodlama.io.northwind.entities.Employee;
@@ -36,7 +39,6 @@ public class OrderManager implements OrderService{
 			responseItem.setDate(order.getDate());
 			responseItem.setFirstName(order.getEmployee().getFirstName());
 			responseItem.setLastName(order.getEmployee().getLastName());
-			responseItem.setSalary(order.getEmployee().getSalary());
 			getAllOrdersResponses.add(responseItem);
 		}
 		return getAllOrdersResponses;
@@ -50,6 +52,42 @@ public class OrderManager implements OrderService{
 		order.setEmployee(employee);
 		orderRepository.save(order);
 		
+	}
+
+	@Override
+	public UpdateOrderResponse update(UpdateOrderRequest updateOrderRequest) {
+		Employee employee  =new Employee();
+		employee.setId(updateOrderRequest.getEmployeeId());
+		Order order = new Order();
+		order.setId(updateOrderRequest.getId());
+		order.setDate(updateOrderRequest.getDate());
+		order.setEmployee(employee);
+		
+		orderRepository.save(order);
+		
+		UpdateOrderResponse updateOrderResponse = new UpdateOrderResponse();
+		updateOrderResponse.setId(order.getId());
+		updateOrderResponse.setDate(order.getDate());
+		updateOrderResponse.setEmployeeId(order.getEmployee().getId());
+		
+		return updateOrderResponse;
+	}
+
+	@Override
+	public DeleteOrderResponse delete(int id) {
+		Order order= orderRepository.findById(id).get();
+		orderRepository.delete(order);
+		
+		DeleteOrderResponse deleteOrderResponse = new DeleteOrderResponse();
+		deleteOrderResponse.setId(order.getId());
+		deleteOrderResponse.setDate(order.getDate());
+		
+		Employee employee =new Employee();
+		employee.setId(order.getEmployee().getId());
+		
+		deleteOrderResponse.setEmployeeId(employee.getId());
+		
+		return deleteOrderResponse;
 	}
 
 }
