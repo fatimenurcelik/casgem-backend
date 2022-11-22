@@ -3,6 +3,7 @@ package com.kodlama.io.northwind.business.concretes;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import com.kodlama.io.northwind.business.abstracts.ProductService;
@@ -12,19 +13,19 @@ import com.kodlama.io.northwind.business.responses.products.DeleteProductRespons
 import com.kodlama.io.northwind.business.responses.products.GetAllProductsResponse;
 import com.kodlama.io.northwind.business.responses.products.GetProductResponse;
 import com.kodlama.io.northwind.business.responses.products.UpdateProductResponse;
+import com.kodlama.io.northwind.core.utilities.mapping.ModelMapperService;
 import com.kodlama.io.northwind.dataAccess.abstracts.ProductRepository;
 import com.kodlama.io.northwind.entities.Category;
 import com.kodlama.io.northwind.entities.Product;
 
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 @Service
 public class ProductManager implements ProductService{
 
 	private ProductRepository productRepository;
-	
-	public ProductManager(ProductRepository productRepository) {
-		super();
-		this.productRepository = productRepository;
-	}
+	private ModelMapperService modelMapperService;
 
 	@Override
 	public List<GetAllProductsResponse> getAll() {
@@ -45,23 +46,11 @@ public class ProductManager implements ProductService{
 
 	@Override
 	public CreateProductResponse add(CreateProductRequest createProductRequest) {
-		Product product = new Product();
-		product.setName(createProductRequest.getName());
-		product.setUnitsInStock(createProductRequest.getUnitsInStock());
-		product.setUnitPrice(createProductRequest.getUnitPrice());
-		
-		Category category= new Category();
-		category.setId(createProductRequest.getCategoryId());
-		
-		product.setCategory(category);
+		Product product = this.modelMapperService.forRequest().map(createProductRequest, Product.class);
 		
 		this.productRepository.save(product);
 	
-		CreateProductResponse createProductResponse = new CreateProductResponse();
-		createProductResponse.setCategoryId(product.getCategory().getId());
-		createProductResponse.setName(product.getName());
-		createProductResponse.setUnitPrice(product.getUnitPrice());
-		createProductResponse.setUnitInStock(product.getUnitsInStock());
+		CreateProductResponse createProductResponse = this.modelMapperService.forResponse().map(product, CreateProductResponse.class);
 		
 		return createProductResponse;
 	}

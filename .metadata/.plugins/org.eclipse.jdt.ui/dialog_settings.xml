@@ -23,6 +23,8 @@
 		<item key="contextSelector.size.y" value="221"/>
 	</section>
 	<section name="quick_assist_proposal_size">
+		<item key="size.x" value="389"/>
+		<item key="size.y" value="245"/>
 	</section>
 	<section name="SourceActionDialog.methods">
 		<item key="VisibilityModifier" value="1"/>
