@@ -13,6 +13,7 @@ import com.kodlamaio.bootcampProject.business.responses.employees.AddEmployeeRes
 import com.kodlamaio.bootcampProject.business.responses.employees.GetAllEmployeeResponse;
 import com.kodlamaio.bootcampProject.business.responses.employees.GetEmployeeResponse;
 import com.kodlamaio.bootcampProject.business.responses.employees.UpdateEmployeeResponse;
+import com.kodlamaio.bootcampProject.core.utilities.exceptions.BusinessException;
 import com.kodlamaio.bootcampProject.core.utilities.mapping.ModelMapperService;
 import com.kodlamaio.bootcampProject.core.utilities.results.DataResult;
 import com.kodlamaio.bootcampProject.core.utilities.results.Result;
@@ -32,6 +33,7 @@ public class EmployeeManager implements EmployeeService{
 	
 	@Override
 	public DataResult<AddEmployeeResponse> add(AddEmployeeRequest addEmployeeRequest) {
+		checkIfEmployeeByIdentityNo(addEmployeeRequest.getIdentityNo());
 		Employee employee = this.modelMapperService.forRequest().map(addEmployeeRequest, Employee.class);
 		employeeRepository.save(employee);
 		AddEmployeeResponse addEmployeeResponse = this.modelMapperService.forResponse().map(employee, AddEmployeeResponse.class);
@@ -40,6 +42,7 @@ public class EmployeeManager implements EmployeeService{
 
 	@Override
 	public DataResult<UpdateEmployeeResponse> update(UpdateEmployeeRequest updateEmployeeRequest) {
+		checkIfEmployeeById(updateEmployeeRequest.getUserId());
 		Employee employee = this.modelMapperService.forRequest().map(updateEmployeeRequest, Employee.class);
 		employeeRepository.save(employee);
 		UpdateEmployeeResponse updateEmployeeResponse = this.modelMapperService.forResponse().map(employee, UpdateEmployeeResponse.class);
@@ -48,6 +51,7 @@ public class EmployeeManager implements EmployeeService{
 
 	@Override
 	public Result delete(int id) {
+		checkIfEmployeeById(id);
 		this.employeeRepository.deleteById(id);
 		return new SuccessResult(Messages.EmployeeDeleted);
 	}
@@ -63,8 +67,22 @@ public class EmployeeManager implements EmployeeService{
 
 	@Override
 	public DataResult<GetEmployeeResponse> getById(int id) {
+		checkIfEmployeeById(id);
 		Employee employee = this.employeeRepository.findById(id).get();
 		GetEmployeeResponse getEmployeeResponse = this.modelMapperService.forResponse().map(employee, GetEmployeeResponse.class);
 		return new SuccessDataResult<GetEmployeeResponse>(getEmployeeResponse);
+	}
+	
+	private void checkIfEmployeeByIdentityNo(String identityNo) {
+		Employee currEmployee =this.employeeRepository.findByIdentityNo(identityNo);
+		if(currEmployee != null) {
+			throw new BusinessException(Messages.EmployeeExist);
+		}
+	}
+	
+	private void checkIfEmployeeById(int id) {
+		if(!this.employeeRepository.existsById(id)) {
+			throw new BusinessException(Messages.EmployeeIdNotExist);
+		}
 	}
 }

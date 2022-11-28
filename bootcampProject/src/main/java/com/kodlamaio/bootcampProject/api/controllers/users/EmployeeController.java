@@ -2,6 +2,8 @@ package com.kodlamaio.bootcampProject.api.controllers.users;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,19 +30,19 @@ import lombok.AllArgsConstructor;
 @RequestMapping("/api/employees")
 public class EmployeeController {
 	private EmployeeService employeeService;
-	
+
 	@GetMapping()
 	public DataResult<List<GetAllEmployeeResponse>> getAll () {
 		return this.employeeService.getAll();
 	}
 	
 	@PostMapping()
-	public DataResult<AddEmployeeResponse> add(@RequestBody AddEmployeeRequest addEmployeeRequest) {
+	public DataResult<AddEmployeeResponse> add(@Valid @RequestBody AddEmployeeRequest addEmployeeRequest) {
 		return this.employeeService.add(addEmployeeRequest);
 	}
 	
 	@PutMapping()
-	public DataResult <UpdateEmployeeResponse> update (@RequestBody UpdateEmployeeRequest updateEmployeeRequest){
+	public DataResult <UpdateEmployeeResponse> update (@Valid @RequestBody UpdateEmployeeRequest updateEmployeeRequest){
 		return this.employeeService.update(updateEmployeeRequest);
 	}
 	
@@ -53,4 +55,5 @@ public class EmployeeController {
 	public DataResult<GetEmployeeResponse> getById(@PathVariable int id){
 		return this.employeeService.getById(id);
 	}
+	
 }

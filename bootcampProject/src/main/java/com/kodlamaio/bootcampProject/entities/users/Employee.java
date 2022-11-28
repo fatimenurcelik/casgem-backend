@@ -12,9 +12,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="employees")
-public class Employee extends User{
-	
-	@Column(name="positon")
+@Table(name = "employees")
+public class Employee extends User {
+
+	@Column(name = "positon")
 	private String positon;
 }

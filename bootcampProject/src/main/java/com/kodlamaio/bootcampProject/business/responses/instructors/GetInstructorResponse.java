@@ -1,5 +1,7 @@
 package com.kodlamaio.bootcampProject.business.responses.instructors;
 
+import com.kodlamaio.bootcampProject.business.responses.users.GetUserResponse;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,10 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class GetInstructorResponse {
+public class GetInstructorResponse extends GetUserResponse{
 	private int userId;
-	private String firstName;
-	private String lastName;
-	private String email;
 	private String companyName;
 }

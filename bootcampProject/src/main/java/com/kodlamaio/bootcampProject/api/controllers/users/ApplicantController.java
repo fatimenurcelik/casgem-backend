@@ -2,6 +2,8 @@ package com.kodlamaio.bootcampProject.api.controllers.users;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,7 +29,8 @@ import lombok.AllArgsConstructor;
 @RestController
 @RequestMapping("/api/applicants")
 public class ApplicantController {
-private ApplicantService applicantService;
+	
+	private ApplicantService applicantService;
 	
 	@GetMapping()
 	public DataResult<List<GetAllApplicantResponse>> getAll(){
@@ -35,12 +38,12 @@ private ApplicantService applicantService;
 	}
 	
 	@PostMapping()
-	public DataResult<AddApplicantResponse> add(@RequestBody AddApplicantRequest addApplicantRequest) {
+	public DataResult<AddApplicantResponse> add(@Valid @RequestBody AddApplicantRequest addApplicantRequest) {
 		return applicantService.add(addApplicantRequest);
 	}
 	
 	@PutMapping()
-	public DataResult<UpdateApplicantResponse> update  (@RequestBody UpdateApplicantRequest updateApplicantRequest) {
+	public DataResult<UpdateApplicantResponse> update  (@Valid @RequestBody UpdateApplicantRequest updateApplicantRequest) {
 		return applicantService.update(updateApplicantRequest);
 	}
 	
