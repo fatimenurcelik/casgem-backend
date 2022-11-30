@@ -11,4 +11,6 @@
 			<item value="org.eclipse.m2e"/>
 		</list>
 	</section>
+	<section name="org.eclipse.ui.preferences.keysPreferencePage">
+	</section>
 </section>

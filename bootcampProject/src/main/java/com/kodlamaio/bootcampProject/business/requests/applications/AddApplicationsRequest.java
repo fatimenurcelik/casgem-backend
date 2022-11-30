@@ -1,7 +1,6 @@
 package com.kodlamaio.bootcampProject.business.requests.applications;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.NotNull;
 
 import com.kodlamaio.bootcampProject.business.constants.ValidationMessages;
 
@@ -13,12 +12,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AddApplicationsRequest {
-	@NotBlank(message= ValidationMessages.Application.ApplicantIdBlank)
+	@NotNull(message= ValidationMessages.Application.ApplicantIdBlank)
 	private int applicantsId;
 	
-	@NotBlank(message= ValidationMessages.Application.BootcampIdBlank)
+	@NotNull(message= ValidationMessages.Application.BootcampIdBlank)
 	private int bootcampId;
 	
-	@NotBlank(message= ValidationMessages.Applicant.)
-	private int state;
+	@NotNull(message = ValidationMessages.Application.StateBlank )
+	private int applicationsStateId;
 }

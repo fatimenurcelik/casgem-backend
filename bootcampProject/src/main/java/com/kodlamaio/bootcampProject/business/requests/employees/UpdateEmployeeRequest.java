@@ -1,6 +1,7 @@
 package com.kodlamaio.bootcampProject.business.requests.employees;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.kodlamaio.bootcampProject.business.constants.ValidationMessages;
@@ -14,7 +15,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UpdateEmployeeRequest extends UpdateUserRequest{
-	@NotBlank(message = ValidationMessages.User.IdBlank)
+	@NotNull(message = ValidationMessages.User.IdBlank)
 	private int userId;
 	
 	@NotBlank(message =ValidationMessages.Employee.PositionBlank)

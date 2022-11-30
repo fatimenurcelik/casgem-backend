@@ -11,5 +11,5 @@ public class UpdateApplicationsResponse {
 	private int id;
 	private int applicantsId;
 	private int bootcampId;
-	private int state;
+	private int applicationsStateId;
 }

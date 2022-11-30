@@ -17,4 +17,5 @@ public interface BootcampsService {
 	Result delete (int id);
 	DataResult<List<GetAllBootcampsResponse>> getAll();
 	DataResult<GetBootcampsResponse> getById(int id);
+	public void checkIfBootcampActivated(int id);
 }

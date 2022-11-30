@@ -1,6 +1,7 @@
 package com.kodlamaio.bootcampProject.business.requests.blackList;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -14,10 +15,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UpdateBlackListRequest {
-	@NotBlank(message= ValidationMessages.Blacklist.IdBlank)
+	@NotNull(message= ValidationMessages.Blacklist.IdBlank)
 	private int id;
 	
-	@NotBlank(message= ValidationMessages.Blacklist.ApplicantIdBlank)
+	@NotNull(message= ValidationMessages.Blacklist.ApplicantIdBlank)
 	private int applicantId;
 	
 	@NotBlank(message= ValidationMessages.Blacklist.ReasonBlank)

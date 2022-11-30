@@ -1,6 +1,7 @@
 package com.kodlamaio.bootcampProject.business.requests.intructors;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.kodlamaio.bootcampProject.business.constants.ValidationMessages;
@@ -14,7 +15,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AddInstructorRequest extends AddUserRequest {
-	@NotBlank(message = ValidationMessages.Instructor.CompanyBlank)
+	@NotNull(message = ValidationMessages.Instructor.CompanyBlank)
 	@Size(min=2, max=50, message= ValidationMessages.Instructor.CompanyValid)
 	private String companyName;
 }

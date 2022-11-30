@@ -36,6 +36,7 @@ public class BootcampsManager implements BootcampsService{
 	@Override
 	public DataResult<AddBootcampsResponse> add(AddBootcampsRequest addBootcampsRequest) {
 		checkIfInstructorById(addBootcampsRequest.getInstructorId());
+		//checkIfBootcampIsActive(addBootcampsRequest.getState());
 		Bootcamps bootcamp= this.modelMapperService.forRequest().map(addBootcampsRequest, Bootcamps.class);
 		bootcamp.setId(0);
 		this.bootcampsRepository.save(bootcamp);
@@ -76,6 +77,13 @@ public class BootcampsManager implements BootcampsService{
 		Bootcamps bootcamps = this.bootcampsRepository.findById(id).get();
 		GetBootcampsResponse response = this.modelMapperService.forResponse().map(bootcamps, GetBootcampsResponse.class);
 		return new SuccessDataResult<GetBootcampsResponse>(response);
+	}
+	
+	public void checkIfBootcampActivated(int id) {
+		Bootcamps checkBootcamp = bootcampsRepository.findById(id).get();
+		if(checkBootcamp.getBootcampsState().getId()== 2) {
+			throw new BusinessException(Messages.BootcampActiveException);
+		}
 	}
 	
 	private void checkIfBootcampsById(int id) {

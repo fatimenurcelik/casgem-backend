@@ -1,6 +1,7 @@
 package com.kodlamaio.bootcampProject.business.requests.applicants;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.kodlamaio.bootcampProject.business.constants.ValidationMessages;
@@ -14,7 +15,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UpdateApplicantRequest extends UpdateUserRequest{
-	@NotBlank(message = ValidationMessages.Applicant.IdBlank)
+	@NotNull(message = ValidationMessages.Applicant.IdBlank)
 	private int userId;
 	
 //	@NotBlank(message = ValidationMessages.Applicant.BlackListId)

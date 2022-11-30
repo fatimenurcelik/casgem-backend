@@ -1,6 +1,7 @@
 package com.kodlamaio.bootcampProject.business.requests.blackList;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -15,7 +16,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AddBlackListRequest {
-	@NotBlank(message= ValidationMessages.Blacklist.ApplicantIdBlank)
+	@NotNull(message= ValidationMessages.Blacklist.ApplicantIdBlank)
 	private int applicantId;
 	
 	@NotBlank(message= ValidationMessages.Blacklist.ReasonBlank)

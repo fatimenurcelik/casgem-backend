@@ -41,6 +41,8 @@ public class ApplicationsManager implements ApplicationsService{
 
 	@Override
 	public DataResult<AddApplicationsResponse> add(AddApplicationsRequest addApplicationsRequest) {
+		checkIfApplicantIsSituations(addApplicationsRequest.getApplicationsStateId());
+		checkIfBootcampActivated(addApplicationsRequest.getBootcampId());
 		checkIfApplicantById(addApplicationsRequest.getApplicantsId());
 		checkIfApplicantInBlacklistById(addApplicationsRequest.getApplicantsId());
 		checkIfBootcampById(addApplicationsRequest.getBootcampId());
@@ -83,6 +85,17 @@ public class ApplicationsManager implements ApplicationsService{
 		Applications applications = this.applicationsRepository.findById(id).get();
 		GetApplicationsResponse response = this.modelMapperService.forResponse().map(applications, GetApplicationsResponse.class);
 		return new SuccessDataResult<GetApplicationsResponse>(response);
+	}
+	
+	public void checkIfApplicantIsSituations(int id) {
+		Applications applications = this.applicationsRepository.findById(id).get();	
+		if(applications.getApplicationsState().getId() == 2 ) {
+			throw new BusinessException(Messages.ApplicantStateRejected);
+		}
+	}
+	
+	private void checkIfBootcampActivated(int id) {
+		bootcampsService.checkIfBootcampActivated(id);
 	}
 	
 	private void checkIfApplicationsById(int id) {

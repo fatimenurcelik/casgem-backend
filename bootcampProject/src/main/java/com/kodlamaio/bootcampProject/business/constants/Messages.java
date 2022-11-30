@@ -18,12 +18,15 @@ public class Messages {
 	public static final String ApplicantDeleted = "Applicant Deleted!";
 	public static final String ApplicantExist = "Applications Exist!";
 	public static final String ApplicantIdNotExist = "Applications Id Not Exist!";
+	public static final String ApplicantStateRejected = "Applications State Rejected!";
+	public static final String ApplicantStateStandBy = "Applications State StandBy!";
 	
 	public static final String BootcampCreated = "Bootcamp Created!";
 	public static final String BootcampUpdated = "Bootcamp Updated!";
 	public static final String BootcampDeleted ="Bootcamp Deleted!";
 	public static final String BootcampExist = "Bootcamp Exist!";
 	public static final String BootcampIdNotExist = "Bootcamp Id Not Exist!";
+	public static final String BootcampActiveException = "Bootcamps is not active";
 
 	public static final String ApplicationsCreated = "Applications Created!";
 	public static final String ApplicationsUpdated = "Applications Updated!";

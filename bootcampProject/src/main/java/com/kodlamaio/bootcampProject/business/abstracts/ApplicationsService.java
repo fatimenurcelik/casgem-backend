@@ -17,4 +17,6 @@ public interface ApplicationsService {
 	Result delete(int id);
 	DataResult<List<GetAllApplicationsResponse>> getAll();
 	DataResult<GetApplicationsResponse> getById(int id);
+//	void checkIfApplicantIsRejected(int id);
+//	void checkIfApplicantIsStandBy(int id);
 }

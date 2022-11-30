@@ -38,8 +38,7 @@ public class ValidationMessages {
     	public static final String IdBlank = "Id cannot be blank";    
         public static final String NameBlank = "Name cannot be blank";    
         public static final String NameValid = "Name must be between 2 and 30 characters";
-//        public static final String MinState = "State cannot be less than 1";
-//        public static final String MaxState = "State cannot be greater than 2";
+        public static final String StateBlank= "State cannot be blank";
         public static final String StartDateBlank = "Start date cannot be blank";
         public static final String EndDateBlank = "End date cannot be blank";
         public static final String InstructorIdBlank = "Instructor id cannot be blank";
@@ -57,7 +56,6 @@ public class ValidationMessages {
     	public static final String IdBlank = "Id cannot be blank";
         public static final String ApplicantIdBlank = "Applicant id cannot be blank";
         public static final String BootcampIdBlank = "Bootcamp id cannot be blank";
-//        public static final String MinState = "State cannot be less than 1";
-//        public static final String MaxState = "State cannot be greater than 4";
+        public static final String StateBlank= "State cannot be blank";
     }
 }

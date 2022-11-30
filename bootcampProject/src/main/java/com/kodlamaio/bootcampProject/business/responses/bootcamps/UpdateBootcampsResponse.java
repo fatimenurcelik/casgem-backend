@@ -1,6 +1,9 @@
 package com.kodlamaio.bootcampProject.business.responses.bootcamps;
 
 import java.time.LocalDate;
+
+import com.kodlamaio.bootcampProject.entities.applications.BootcampsState;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,5 +17,5 @@ public class UpdateBootcampsResponse {
 	private String name;
 	private LocalDate dateStart;
 	private LocalDate dateEnd;
-	private int state;
+	private int bootcampsStateId;
 }
